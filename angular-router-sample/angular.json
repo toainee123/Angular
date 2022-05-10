@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-project": {
+    "angular-router-sample": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-project",
+            "outputPath": "dist/angular-router-sample",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,8 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-project:build:production"
+              "browserTarget": "angular-router-sample:build:production"
             },
             "development": {
-              "browserTarget": "my-project:build:development"
+              "browserTarget": "angular-router-sample:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-project:build"
+            "browserTarget": "angular-router-sample:build"
           }
         },
         "test": {
@@ -103,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "my-project"
+  "defaultProject": "angular-router-sample"
 }
