@@ -1,1 +1,38 @@
-<h1 style="text-align: center">About Page</h1>
+<h1 style="text-align: center">Products Page</h1>
+<hr>
+<p>String: {{productName}}</p>
+<p>Number: {{productPrice}}</p>
+<p>Boolean: {{productStatus}}</p>
+<p>Info: {{productInfo.name}} - {{productInfo.price}}</p>
+<hr>
+<button (click)= "onhandleClick()" class="btn btn-submit" >Click</button>
+<app-hello></app-hello>
+<input type="text" 
+    [(ngModel)]="title" 
+     value="{{title}}">,
+    {{title}},
+    
+<div *ngIf="productStatus">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
+                <td>
+                    <button (click)="onhandleRemove(product.id)" class="btn btn-danger">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
