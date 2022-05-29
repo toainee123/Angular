@@ -6,12 +6,14 @@
 <p>Info: {{productInfo.name}} - {{productInfo.price}}</p>
 <hr>
 <button (click)= "onhandleClick()" class="btn btn-submit" >Click</button>
+
+
+
 <app-hello></app-hello>
-<input type="text" 
-    [(ngModel)]="title" 
-     value="{{title}}">,
-    {{title}},
+<input type="text" [(ngModel)]="title" value="{{title}}" >,{{title}}
+
     
+
 <div *ngIf="productStatus">
     <table class="table table-bordered">
         <thead>

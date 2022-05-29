@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: []
 })
 export class AboutComponent {
-  @Input() data!: string
+  @Input() data!: string;
+
   title = 22;
   productName: string = 'Product A';
   productPrice: number = 200;
@@ -41,6 +42,8 @@ export class AboutComponent {
     console.log('Clicked');
     this.productStatus = !this.productStatus
   }
+
+
   onhandleRemove(id:number){
    this.productList = this.productList.filter(item => item.id !== id)
     
@@ -48,6 +51,8 @@ export class AboutComponent {
   onhandleKeyPress(event:any){
     this.title = event.target.value
     console.log(this.title = event.target.value);
+  }
+  onhandleAdd(product:any) {
     
   }
 }
