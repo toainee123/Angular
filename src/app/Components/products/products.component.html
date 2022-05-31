@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Status</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let products of productList; let i = index ">
+          <td>{{i + 1}}</td>
+          <td>{{products.name}}</td>
+          <td>{{products.price}}</td>
+          <td>{{products.status}}</td>
+          <td><button class="btn btn-primary ms-1" routerLink="/products/edit/{{products.id}}">Update</button></td>
+          <td><button (click)="onRemove(products.id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button routerLink="/add">Add</button>
