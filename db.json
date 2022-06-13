@@ -1,18 +1,6 @@
 {
   "products": [
     {
-      "id": 2,
-      "name": "product B Update",
-      "price": 300,
-      "status": false
-    },
-    {
-      "id": 3,
-      "name": "product C Update",
-      "price": 400,
-      "status": false
-    },
-    {
       "name": "Product C",
       "price": 5000,
       "id": 4
@@ -51,6 +39,18 @@
       "price": "12345",
       "status": true,
       "id": 10
+    }
+  ],
+  "user": [
+    {
+      "username": "buitoai2031",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "username": "buitoai2031@gmail.com",
+      "password": "123",
+      "id": 2
     }
   ]
 }

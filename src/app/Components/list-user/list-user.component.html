@@ -1,0 +1,20 @@
+<p>list-user works!</p>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">userName</th>
+        <th scope="col">password</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+          <td>{{user.id}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.password}}</td>
+          <td><button class="btn btn-primary ms-1" routerLink="">Update</button></td>
+          <td><button (click)="onRemove(user.id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>

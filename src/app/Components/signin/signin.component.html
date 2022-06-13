@@ -1,1 +1,6 @@
 <p>signin works!</p>
+<form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="user.username" name="username">
+    <input type="text" [(ngModel)]="user.password" name="password">
+    <button type="submit">Add</button>
+</form>

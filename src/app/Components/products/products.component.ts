@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductService } from 'service/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/model/Products';
-import { isEmpty } from 'rxjs';
+import { ProductService } from 'src/service/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
