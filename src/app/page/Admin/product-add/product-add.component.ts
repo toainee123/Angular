@@ -10,9 +10,11 @@ import { IProduct } from 'src/model/Products';
 })
 export class ProductAddComponent implements OnInit {
   product: IProduct = {
+    img: "",
     name: "",
     price: 0,
-    status: true
+    status: true,
+    desc: ""
   }
   constructor(
     private productService: ProductService,
@@ -32,7 +34,7 @@ export class ProductAddComponent implements OnInit {
     this.productService.addProduct(this.product).subscribe(data => {
       console.log(data)
       setTimeout( () => {
-        this.router.navigateByUrl('/listProducts')
+        this.router.navigateByUrl('/admin')
       }, 2000)
     })
   }

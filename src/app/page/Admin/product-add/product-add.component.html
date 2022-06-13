@@ -1,7 +1,35 @@
 
 {{ product | json}}
-<form (ngSubmit)="onSubmit()">
+<!-- <form (ngSubmit)="onSubmit()">
     <input type="text" [(ngModel)]="product.name" name="name">
     <input type="text" [(ngModel)]="product.price" name="price">
     <button type="submit">Add</button>
+</form> -->
+<form (ngSubmit)="onSubmit()" >
+    <div class="border solid">
+        <h1 class="text-center text-3xl">Form Add Products</h1>
+        <div class="mb-6 text-center">
+            <label for="email" class="block mb-2 text-sm font-medium mt-[10px]">Product Name</label>
+            <input type="email" [(ngModel)]="product.name" name="name" class="ml-[420px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[340px] p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="mb-6 text-center">
+            <label for="" class="block mb-2 text-sm font-medium mt-[10px]">Product Price</label>
+            <input type="text" [(ngModel)]="product.price" name="price" class=" ml-[420px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[340px] p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        </div>
+        <div class="mb-6 text-center">
+            <label for="" class="block mb-2 text-sm font-medium mt-[10px]">Product Image</label>
+            <input type="text" [(ngModel)]="product.img" name="image" class=" ml-[420px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[340px] p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        </div>
+        <div class="mb-6 text-center">
+            <label for="" class="block mb-2 text-sm font-medium mt-[10px]">Product Descriptions</label>
+            <input type="text" [(ngModel)]="product.desc" name="desc" class=" ml-[420px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[340px] p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+        </div>
+        <div class="flex items-start mb-6 text-center">
+            <div class="flex items-center h-5 text-center">
+              <input id="remember" type="checkbox" value="" class=" ml-[425px] w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" >
+            </div>
+            <label for="remember" class="ml-2 text-sm font-medium ">Remember me</label>
+        </div>
+          <button type="submit" class=" ml-[520px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    </div>
 </form>

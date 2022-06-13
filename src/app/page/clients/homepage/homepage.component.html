@@ -60,54 +60,29 @@
             </div>
         </div>
     </section>
-
-
     <section>
         <div class="info">
-            <div class="max-w-6xl mx-auto px-5">
+            <div  class="max-w-6xl mx-auto px-5">
                 <div class="flex justify-between py-5">
                      <h2 class="text-2xl font-bold ">Feature Projects</h2>
                 </div>
-                <div class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
+                <div *ngFor="let item of listProduct" class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
                     <div>
-                           <img class="rounded-sm w-full" src="https://picsum.photos/246/246" alt=""/>
+                           <img class="rounded-sm w-full" src="{{item.img}}" alt=""/>
                     </div>
                     <div>
                         <h3 >
-                            <a  href=""class="text-[#21243D] text-[30px] font-bold">Designing Dashboards</a>
+                            <a  href=""class="text-[#21243D] text-[30px] font-bold">{{item.name}}</a>
                         </h3>
                         <div class="flex space-x-4 items-center py-5">
                             <span class="inline-block bg-[#142850] py-1 px-2 font-bold text-white rounded-full">2020</span>
                             <span class="text-[#8695A4]">Dashboard</span>
                         </div>
-                        <p class="text-[#21243D]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                    </div>
-                </div>
-                <!-- end Project -->
-                <div class="sm:grid md:grid-cols-[246px,auto] gap-8 border-b py-8 ">
-                    <div>
-                           <img class="rounded-sm w-full" src="https://picsum.photos/246/246" alt=""/>
-                    </div>
-                    <div>
-                        <h3 >
-                            <a  href=""class="text-[#21243D] text-[30px] font-bold">Designing Dashboards</a>
-                        </h3>
-                        <div class="flex space-x-4 items-center py-5">
-                            <span class="inline-block bg-[#142850] py-1 px-2 font-bold text-white rounded-full">2020</span>
-                            <span class="text-[#8695A4]">Dashboard</span>
-                        </div>
-                        <p class="text-[#21243D]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <p class="text-[#21243D]">{{item.desc}}</p>
                     </div>
                 </div>
                 <!-- end Project -->
             </div>    
-        </div>
-    </section>
-    <section>
-        <div class="feature-project">
-            <div class="max-w-6xl mx-auto px-5">
-
-            </div>
         </div>
     </section>
     <footer>
